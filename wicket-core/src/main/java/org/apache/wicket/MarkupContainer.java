@@ -1835,11 +1835,13 @@ public abstract class MarkupContainer extends Component implements Iterable<Comp
 	@Override
 	protected void onAfterRenderChildren()
 	{
+		// Loop through child components
 		for (Component child : this)
 		{
-			// set RENDERING_FLAG to false for auto-component's children (like Enclosure)
-			child.markRendering(false);
+			// Call end request on the child
+			child.afterRender();
 		}
+
 		super.onAfterRenderChildren();
 	}
 
