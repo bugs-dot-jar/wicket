@@ -132,6 +132,7 @@ public class BufferedWebResponse extends WebResponse implements IMetaDataBufferi
 		@Override
 		protected void invoke(WebResponse response)
 		{
+
 			AppendingStringBuffer responseBuffer = new AppendingStringBuffer(builder);
 
 			List<IResponseFilter> responseFilters = Application.get()
